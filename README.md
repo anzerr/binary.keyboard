@@ -1,7 +1,7 @@
 
 ## `3% Keyboard`
 
-logo]: https://raw.githubusercontent.com/anzerr/binary.keyboard/master/picture/keyboard.jpg "keyboard"
+[logo]: https://raw.githubusercontent.com/anzerr/binary.keyboard/master/picture/keyboard.jpg "keyboard"
 ![alt text][logo]
 
 ### `Info`
