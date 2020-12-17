@@ -1,0 +1,32 @@
+<html>
+	<body>
+		<script>
+			(() => {
+				let a = '', c = 0, block = [];
+				for (let i = 0; i < 255; i++) {
+					a += `<div>\
+						<div style="width:100px;display:inline-block;">${String.fromCharCode(i)}</div>\
+						<div style="width:100px;display:inline-block;">${i}</div>\
+						<div style="width:100px;display:inline-block;">${i.toString(2).padStart(8, '0')}</div>\
+					</div>`;
+					c += 1;
+					if (c > 50) {
+						block.push(a);
+						a = '';
+						c = 0;
+					}
+				}
+				block.push(a);
+				let out = '';
+				const last = '<div style="text-align:center;"><img src="qr.png"></div>';
+				for (let i = 0; i < block.length; i += 2) {
+					out += `<div style="display: flex;margin-bottom:${19 * 6}px;">\
+						<div style="float:left;width:50%;">${block[i] || ''}</div>\
+						<div style="float:left;width:50%;">${block[i + 1] || last}</div>\
+					</div>`;
+				}
+				document.body.innerHTML = out;
+			})();
+		</script>
+	</body>
+</html>
